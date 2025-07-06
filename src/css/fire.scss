@@ -1,0 +1,310 @@
+$contentWidth: 1200px;
+
+@keyframes arrowHide {
+  0% {
+    opacity: 1;
+    bottom: 0.01rem;
+  }
+
+  25% {
+ 
+    opacity: 0;
+    bottom: -300px;
+  }
+  75% {
+    
+    opacity: 0;
+    bottom: -300px;
+  }
+
+  76% {
+    opacity: 0;
+    bottom: 1px;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 1px;
+  }
+}
+
+.fire-module {
+  position: static;
+  background-color: #020202;
+  height: 10.8rem;
+  overflow: hidden;
+  transition: 1s;
+  overflow: hidden;
+  &.secondStep {
+    height: 8rem;
+  }
+  &.thirdStep {
+    height: 1.2rem;
+  }
+}
+
+.fire-module-in {
+  position: relative;
+  margin: 0px auto;
+  width: 100%;
+  height: 10.8rem;
+  height: 100%;
+  overflow: hidden;
+  background-color: #092323;
+  transition: 1s;
+  .fire-module-bg {
+    width: 100%;
+    height: 100%;
+    background: url("@/assets/star-bg.webp") no-repeat;
+    background-size: cover;
+  }
+  .fire-module-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  &.secondStep {
+    margin-top: 0.16rem;
+    height: 6rem;
+    width: $contentWidth;
+    border-radius: 0.4rem;
+    .fire-info {
+      height: 3.2rem;
+    }
+    .fire-btn {
+      animation: arrowHide 1.2s ease;
+    }
+  }
+  &.thirdStep {
+    height: 0.88rem;
+    border-radius: 0.4rem;
+  }
+  &.hide {
+    opacity: 0;
+  }
+
+  .fire-info {
+    position: relative;
+    height: 5.12rem;
+    margin-top: 0.96rem;
+    text-align: center;
+    color: #fff;
+    text-align: center;
+    font-family: "PingFang SC";
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 0.88rem;
+    opacity: 0.8;
+    transition: 1s;
+
+    .blue {
+      color: #1ce2e6;
+    }
+  }
+  .fire-desc {
+    margin-top: 0.24rem;
+  }
+
+  .fire-desc1 {
+    color: #fff;
+    text-align: center;
+    font-family: "PingFang SC";
+    font-size: 0.48rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 0.56rem;
+  }
+
+  .fire-desc2 {
+    margin-top: 8rem;
+    color: rgba(255, 255, 255, 0.64);
+    text-align: center;
+    font-family: "Source Han Sans CN";
+    font-size: 0.16rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.32rem;
+  }
+
+  .fire-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 0.01rem;
+    transform: translateX(-50%);
+
+    img {
+      width: 0.64rem;
+      height: 0.64rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.header-nav {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  height: 0.88rem;
+  padding: 0 0.64rem;
+
+  .header-logo {
+    margin-right: 0.88rem;
+
+    img {
+      width: 1.83rem;
+      object-fit: contain;
+    }
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+
+    .header-nav-item {
+      margin-right: 0.24rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.12rem;
+      height: 0.48rem;
+      color: #fff;
+      cursor: pointer;
+      font-family: "Source Han Sans CN";
+      font-size: 0.16rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 0.24rem;
+      border-radius: 200px;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+    }
+  }
+}
+.header-nav-fixed {
+  display: none;
+  position: fixed;
+  top: 0.16rem;
+  width: $contentWidth;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  border-radius: 200px;
+}
+.header-nav-fixed.show {
+  display: flex;
+  animation: navShow 1s forwards;
+}
+@keyframes navShow {
+  0% {
+   
+  }
+  50% {
+
+  }
+
+  100% {
+     background-color: #092323;
+  }
+}
+
+@media (max-width: 768px) {
+  .fire-module {
+    height: 10.80rem;
+    &.secondStep {
+      height: 8rem;
+    }
+    &.thirdStep {
+      height: 1.20rem;
+    }
+  }
+  .fire-module-in {
+  width: 100%;
+  height: 10.8rem;
+  height: 100%;
+
+  // &.secondStep {
+  //   margin-top: 0.16rem;
+  //   height: 6rem;
+  //   width: $contentWidth;
+  //   border-radius: 0.4rem;
+  //   .fire-info {
+  //     height: 3.2rem;
+  //   }
+  //   .fire-btn {
+  //     animation: arrowHide 1.2s ease;
+  //   }
+  // }
+  // &.thirdStep {
+  //   height: 0.88rem;
+  //   border-radius: 0.4rem;
+  // }
+  // &.hide {
+  //   opacity: 0;
+  // }
+
+  .fire-info {
+    height: 6.52rem;
+    margin-top: 0.96rem;
+    font-size: 1.2rem;
+    line-height: 1.28rem;
+  }
+  .fire-desc {
+    margin-top: 0.42rem;
+     
+  }
+
+  .fire-desc1 {
+   font-size: 0.88rem;
+        line-height: 0.6rem;
+  }
+
+  .fire-desc2 {
+    margin-top: 8rem;
+      font-size: 0.36rem;
+          line-height: 0.52rem;
+  }
+
+  .fire-btn {
+    img {
+      width: 0.94rem;
+      height: 0.94rem;
+      cursor: pointer;
+    }
+  }
+}
+  .header-nav {
+  height: 1.88rem;
+  padding: 0 0.84rem;
+
+  .header-logo {
+    margin-right: 0.88rem;
+
+    img {
+      width: 4.13rem;
+      object-fit: contain;
+    }
+  }
+
+  &-list {
+
+    .header-nav-item {
+      margin-right: 0.34rem;
+      width: 3.12rem;
+      height: 0.88rem;
+      font-size: 0.42rem;
+    }
+  }
+}
+.header-nav-fixed {
+  top: 0.16rem;
+  width: 100%;
+}
+}

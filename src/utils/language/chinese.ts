@@ -1,0 +1,59 @@
+export default {
+  nav: {
+    text1: "即刻体验",
+    text2: "产品介绍",
+    text3: "开放资源",
+  },
+  fire: {
+    title1: "SparQi Research Kit",
+    title2: "Ignite the Spark of ",
+    title3: "Wearable Intelligence",
+    desc: "星种开发套件：点燃穿戴智能的星火",
+    desc2:
+      "SparQi Research Kit 星种开发套件是一套专为科研机构、医疗单位及创新团队打造的可穿戴研究平台，提供<br/>包括智能戒指、腕带、贴片与眼镜在内的设备原型。<br/>搭载多模态传感能力（IMU、PPG、EMG、温度、视觉等），支持边缘计算与AI模型研究，助力算法验证<br/>、AI数据集构建与智能终端原型开发。",
+  },
+  apply: {
+    title1: "Apply for SparQi Kit",
+    title2: "Explore the",
+    title3: "Frontier of AI",
+    desc: "申请星种设备，探索AI边界",
+    btnText: "立即申请",
+    btnTextHover: "进入申请页面",
+  },
+  product: {
+    title: "我们的产品",
+    content:
+      "我们的平台支持模块化策略开发、自动验证与全面回测。</br>利用 AI 智能决策，告别盲目交易，高效掌控市场。",
+    card1Title: "模块化开发",
+    card1Content: "用灵活可复用的组件，高效打造智能策略。",
+    card2Title: "自动验证",
+    card2Content: "确保策略符合关键性能标准，</br>高效节省时间。",
+    card3Title: "全面回测",
+    card3Content: "轻松基于历史数据测试并优化算法。",
+    card4Title: "释放无尽潜力",
+    card4Content: "消除交易的不确定性，</br>释放AI驱动策略潜能。",
+    tips: "我们提供资源与支持，助力您的交易算法迈向更高水平，包括：",
+  },
+  sdk: {
+    title1: "Download SDK",
+    title2: "Start Developing Today",
+    title3: "一键下载，轻松接入",
+    desc: "星种套件提供全套 SDK 支持，涵盖原始数据读取、信号预处理、传感器同步接口与可视化模块，适用于 Android/iOS/PC 等平台。我们还支持自定义 API 接入、模型部署接口开放。",
+    btnText: "即刻下载",
+    btnTextHover: "进入下载页面",
+  },
+  footer: {
+    laboratory: "火种实验室",
+    develop: "星种开发套件",
+    resouce: "资源",
+    manual: "设备手册",
+    SDKDoc: "SDK 文档",
+    case: "项目案例合集",
+    concat: "联系我们",
+    address: "中国 北京市 海淀区 世宁大厦18层",
+    privacy: "隐私政策",
+    terms: "使用条款",
+    ICP: "京ICP备xxxxx号",
+    copyright: "Copyright © 2025 Apple Inc. All rights reserved."
+  },
+};

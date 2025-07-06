@@ -1,0 +1,42 @@
+{
+  "name": "offical",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/core": "^13.5.0",
+    "animate.css": "^4.1.1",
+    "autoprefixer": "^10.4.21",
+    "motion-v": "^1.4.0",
+    "postcss-pxtorem": "^6.1.0",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@inspira-ui/plugins": "^0.0.1",
+    "@types/node": "^24.0.10",
+    "@vicons/ionicons5": "^0.13.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "autoprefixer": "^10.4.21",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "naive-ui": "^2.41.0",
+    "node-sass": "^9.0.0",
+    "postcss": "^8.5.6",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-viewport-units": "^0.1.6",
+    "sass": "^1.85.1",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^3.4.17",
+    "tw-animate-css": "^1.3.4",
+    "typescript": "~5.7.2",
+    "vfonts": "^0.0.3",
+    "vite": "^6.2.0",
+    "vue-tsc": "^2.2.4"
+  }
+}

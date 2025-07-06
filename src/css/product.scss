@@ -1,0 +1,121 @@
+$contentWidth: 1200px;
+.my-product {
+  background-color: rgba(249, 249, 249, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-in {
+    width: $contentWidth;
+    overflow: hidden;
+
+    .my-product-title {
+      margin-top: 0.96rem;
+      padding-bottom: 0.32rem;
+      color: #000;
+      font-family: "Source Han Sans CN";
+      font-size: 0.48rem;
+      font-style: normal;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .my-product-content {
+      margin: 0 auto 0.74rem;
+      width: 100%;
+
+      .my-product-item {
+        margin-bottom: 0.24rem;
+        padding: 0.16rem;
+        width: 100%;
+        height: 7.12rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        box-sizing: border-box;
+        border-radius: 0.24rem;
+        &-left {
+          position: relative;
+
+          width: 4.79rem;
+          height: 6.8rem;
+          &-item {
+            .my-poster-item {
+              width: 100%;
+              height: 6.8rem;
+
+              object-fit: cover;
+              border-radius: 0.16rem;
+              overflow: hidden;
+            }
+          }
+
+          .my-product-switch {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0.25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.24rem;
+            &-item {
+              width: 0.24rem;
+              height: 0.12rem;
+              cursor: pointer;
+              border-radius: 2000px;
+              background: rgba(0, 0, 0, 0.12);
+              &.active {
+                width: 0.64rem;
+                background-color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .my-product {
+    &-in {
+      width: 100%;
+
+      .my-product-title {
+        margin-top: 1.06rem;
+        padding-bottom: 0.75rem;
+        font-size: 0.88rem;
+      }
+      .my-product-content{
+        .my-product-item {
+        margin-bottom: 0.24rem;
+        padding: 0.4rem;
+        height: 12.12rem;
+        border-radius: 0.28rem;
+        &-left {
+          width: 6.79rem;
+          height: 10.5rem;
+          &-item {
+            .my-poster-item {
+              height: 10.5rem;
+
+              border-radius: 0.22rem;
+            }
+          }
+
+          .my-product-switch {
+            bottom: 0.34rem;
+            gap: 0.36rem;
+            &-item {
+              width: 0.36rem;
+              height: 0.18rem;
+              &.active {
+                width: 0.96rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  }
+}
