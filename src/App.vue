@@ -465,7 +465,7 @@ const handleProductClick = (item: any, childIndex: number) => {
 
             </p>
             <div class="div-2">
-              <div class="text-wrapper-29">{{ languageDic.footer.privacy }}</div>
+              <div class="text-wrapper-30">{{ languageDic.footer.privacy }}</div>
               <div class="text-wrapper-30">{{ languageDic.footer.terms }}</div>
               <div class="text-wrapper-30">{{ languageDic.footer.ICP }}</div>
             </div>
@@ -486,6 +486,11 @@ const handleProductClick = (item: any, childIndex: number) => {
     </div>
   </div>
 </template>
+<style>
+*::-webkit-scrollbar {
+  width: 0;
+}
+</style>
 
 <style lang="scss" scoped>
 $contentWidth: 1200px;
@@ -947,6 +952,10 @@ $contentWidth: 1200px;
     letter-spacing: 0;
     line-height: 0.12rem;
     white-space: nowrap;
+    cursor: pointer;
+    &:hover {
+      color: #000000;
+    }
   }
 }
 
