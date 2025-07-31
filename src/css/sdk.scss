@@ -145,7 +145,7 @@ $contentWidth: 1200px;
 
 
     .sdk-code {
-      margin-top: 1.96rem;
+      margin-top: 2.36rem;
       margin-bottom: 0.80rem;
       position: relative;
       z-index: 1;
@@ -242,6 +242,97 @@ $contentWidth: 1200px;
       .sdk-download-wrap {
         height: 1rem;
         font-size: 0.32rem;
+             .sdk-icon {
+        width: 0.36rem;
+        height: 0.36rem;
+      }
+        .svg-icon {
+          width: 0.36rem;
+        }
+
+        &:hover {
+          .sdk-download-btn-default {
+            width: 4rem;
+          }
+
+          .sdk-download-btn-hover {
+            width: 4rem;
+          }
+        }
+
+        .sdk-download-btn-default {
+          width: 3rem;
+          gap: 0.1rem;
+          border: 0.02rem solid #000;
+          border-radius: 2rem;
+        }
+
+        .sdk-download-btn-hover {
+          width: 3rem;
+          gap: 0.01rem;
+          border: 0.02rem solid #06b1b1;
+          border-radius: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+ .sdk-module {
+    &-in {
+      width: 100%;
+
+      .sdk-info {
+        width: 13.5rem;
+
+        .sdk-title {
+          font-size: 1.2rem;
+
+        }
+
+        .sdk-text {
+          margin: 0.16rem auto 0.40rem;
+          font-size: 0.88rem;
+          line-height: 0.96rem;
+        }
+
+        .sdk-desc {
+          font-size: 0.36rem;
+          line-height: 0.52rem;
+        }
+      }
+
+      .sdk-code {
+        margin-top: 1rem;
+
+        &.customFadeInUp {
+
+          .sdk-bg {
+            width: 15.5rem;
+            height: 9.5rem;
+          }
+        }
+
+        .sdk-bg {
+          img {
+            margin-top: 0.3rem;
+            width: 85%;
+          }
+        }
+
+
+      }
+      .sdk-download-wrap {
+        height: 1rem;
+        font-size: 0.32rem;
+
+      .sdk-icon {
+        width: 0.36rem;
+        height: 0.36rem;
+      }
+
         .svg-icon {
           width: 0.36rem;
         }

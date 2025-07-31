@@ -7,12 +7,10 @@ $contentWidth: 1200px;
   }
 
   25% {
- 
     opacity: 0;
     bottom: -300px;
   }
   75% {
-    
     opacity: 0;
     bottom: -300px;
   }
@@ -120,7 +118,7 @@ $contentWidth: 1200px;
   }
 
   .fire-desc2 {
-    margin-top: 8rem;
+    margin-top: 0.4rem;
     color: rgba(255, 255, 255, 0.64);
     text-align: center;
     font-family: "Source Han Sans CN";
@@ -204,107 +202,195 @@ $contentWidth: 1200px;
 }
 @keyframes navShow {
   0% {
-   
   }
   50% {
-
   }
 
   100% {
-     background-color: #092323;
+    background-color: #092323;
   }
 }
 
 @media (max-width: 768px) {
   .fire-module {
-    height: 10.80rem;
+    height: 12.8rem;
     &.secondStep {
       height: 8rem;
     }
     &.thirdStep {
-      height: 1.20rem;
+      height: 1.2rem;
     }
   }
   .fire-module-in {
-  width: 100%;
-  height: 10.8rem;
-  height: 100%;
+    width: 100%;
+    height: 12.8rem;
+    height: 100%;
 
-  // &.secondStep {
-  //   margin-top: 0.16rem;
-  //   height: 6rem;
-  //   width: $contentWidth;
-  //   border-radius: 0.4rem;
-  //   .fire-info {
-  //     height: 3.2rem;
-  //   }
-  //   .fire-btn {
-  //     animation: arrowHide 1.2s ease;
-  //   }
-  // }
-  // &.thirdStep {
-  //   height: 0.88rem;
-  //   border-radius: 0.4rem;
-  // }
-  // &.hide {
-  //   opacity: 0;
-  // }
+    // &.secondStep {
+    //   margin-top: 0.16rem;
+    //   height: 6rem;
+    //   width: $contentWidth;
+    //   border-radius: 0.4rem;
+    //   .fire-info {
+    //     height: 3.2rem;
+    //   }
+    //   .fire-btn {
+    //     animation: arrowHide 1.2s ease;
+    //   }
+    // }
+    // &.thirdStep {
+    //   height: 0.88rem;
+    //   border-radius: 0.4rem;
+    // }
+    // &.hide {
+    //   opacity: 0;
+    // }
 
-  .fire-info {
-    height: 6.52rem;
-    margin-top: 0.96rem;
-    font-size: 1.2rem;
-    line-height: 1.28rem;
-  }
-  .fire-desc {
-    margin-top: 0.42rem;
-     
-  }
+    .fire-info {
+      height: 6.52rem;
+      margin-top: 0.96rem;
+      font-size: 1.2rem;
+      line-height: 1.28rem;
+    }
+    .fire-desc {
+      margin-top: 0.42rem;
+    }
 
-  .fire-desc1 {
-   font-size: 0.88rem;
-        line-height: 0.6rem;
-  }
+    .fire-desc1 {
+      font-size: 0.88rem;
+      line-height: 0.6rem;
+    }
 
-  .fire-desc2 {
-    margin-top: 8rem;
+    .fire-desc2 {
+      margin-top: 0.58rem;
       font-size: 0.36rem;
-          line-height: 0.52rem;
-  }
+      line-height: 0.52rem;
+    }
 
-  .fire-btn {
-    img {
-      width: 0.94rem;
-      height: 0.94rem;
-      cursor: pointer;
+    .fire-btn {
+      img {
+        width: 0.94rem;
+        height: 0.94rem;
+        cursor: pointer;
+      }
     }
   }
-}
   .header-nav {
-  height: 1.88rem;
-  padding: 0 0.84rem;
+    height: 1.88rem;
+    padding: 0 0.84rem;
 
-  .header-logo {
-    margin-right: 0.88rem;
+    .header-logo {
+      margin-right: 0.88rem;
 
-    img {
-      width: 4.13rem;
-      object-fit: contain;
+      img {
+        width: 4.13rem;
+        object-fit: contain;
+      }
+    }
+
+    &-list {
+      .header-nav-item {
+        margin-right: 0.34rem;
+        width: 3.12rem;
+        height: 0.88rem;
+        font-size: 0.42rem;
+      }
     }
   }
+  .header-nav-fixed {
+    top: 0.16rem;
+    width: 100%;
+  }
+}
 
-  &-list {
+@media (min-width: 768px) and (max-width: 1200px) {
+  .fire-module {
+    height: 12.8rem;
+    &.secondStep {
+      height: 8rem;
+    }
+    &.thirdStep {
+      height: 1.2rem;
+    }
+  }
+  .fire-module-in {
+    width: 100%;
+    height: 12.8rem;
+    height: 100%;
 
-    .header-nav-item {
-      margin-right: 0.34rem;
-      width: 3.12rem;
+    &.secondStep {
+      margin-top: 0.16rem;
+      height: 8rem;
+      width: 100%;
+      border-radius: 0.4rem;
+      .fire-info {
+        height: 3.2rem;
+      }
+      .fire-btn {
+        animation: arrowHide 1.2s ease;
+      }
+    }
+    &.thirdStep {
       height: 0.88rem;
-      font-size: 0.42rem;
+      border-radius: 0.4rem;
+    }
+    &.hide {
+      opacity: 0;
+    }
+
+    .fire-info {
+      height: 6.52rem;
+      margin-top: 0.96rem;
+      font-size: 1.2rem;
+      line-height: 1.28rem;
+    }
+    .fire-desc {
+      margin-top: 0.42rem;
+    }
+
+    .fire-desc1 {
+      font-size: 0.88rem;
+      line-height: 0.6rem;
+    }
+
+    .fire-desc2 {
+      margin-top: 0.48rem;
+      font-size: 0.36rem;
+      line-height: 0.52rem;
+    }
+
+    .fire-btn {
+      img {
+        width: 0.94rem;
+        height: 0.94rem;
+        cursor: pointer;
+      }
     }
   }
-}
-.header-nav-fixed {
-  top: 0.16rem;
-  width: 100%;
-}
+  .header-nav {
+    height: 1.88rem;
+    padding: 0 0.84rem;
+
+    .header-logo {
+      margin-right: 0.88rem;
+
+      img {
+        width: 4.13rem;
+        object-fit: contain;
+      }
+    }
+
+    &-list {
+      .header-nav-item {
+        margin-right: 0.34rem;
+        width: 3.12rem;
+        height: 0.88rem;
+        font-size: 0.42rem;
+      }
+    }
+  }
+  .header-nav-fixed {
+    top: 0.16rem;
+    width: 100%;
+  }
 }

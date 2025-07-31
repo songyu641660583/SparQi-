@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import "animate.css";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, h } from "vue";
 import languageData from "./utils/language";
 import { getAssetsFile } from "./utils";
 import { productList } from "./utils/data"
@@ -65,9 +65,9 @@ const handleScroll = () => {
     if (fireDescRef?.value) {
       fireDescRef.value.classList.add("customFadeIn")
     }
-    if (fireDescRef2?.value) {
-      fireDescRef2.value.classList.add("customFadeIn")
-    }
+    // if (fireDescRef2?.value) {
+    //   fireDescRef2.value.classList.add("customFadeIn")
+    // }
 
     unLock(2, 2500)
 
@@ -147,15 +147,15 @@ const handleScroll = () => {
           }
         }, 500)
       }
-      if (fireDescRef2?.value) {
-        fireDescRef2.value.classList.add("customFadeOut")
-        fireDescRef2.value.classList.remove("customFadeIn")
-        setTimeout(() => {
-          if (fireDescRef2?.value) {
-            fireDescRef2.value.classList.remove("customFadeOut")
-          }
-        }, 500)
-      }
+      // if (fireDescRef2?.value) {
+      //   fireDescRef2.value.classList.add("customFadeOut")
+      //   fireDescRef2.value.classList.remove("customFadeIn")
+      //   setTimeout(() => {
+      //     if (fireDescRef2?.value) {
+      //       fireDescRef2.value.classList.remove("customFadeOut")
+      //     }
+      //   }, 500)
+      // }
     }, 1000)
   }
 
@@ -265,11 +265,12 @@ const handleProductClick = (item: any, childIndex: number) => {
             </div>
             <div class="fire-desc" ref="fireDescRef">
               <div class="fire-desc1">{{ languageDic.fire.desc }}</div>
-              <div class="fire-desc2" ref="fireDescRef2" v-html="languageDic.fire.desc2"></div>
+              <div class="fire-desc2" v-html="languageDic.fire.desc2"></div>
+              <!-- ref="fireDescRef2"  -->
             </div>
-            <div class="fire-btn">
+            <!-- <div class="fire-btn">
               <img src="@/assets/arrow-down.png" alt="">
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -313,8 +314,7 @@ const handleProductClick = (item: any, childIndex: number) => {
           {{ languageDic.product.title }}
         </div>
         <div class="my-product-content">
-          <div class="my-product-item animationElement" :ref="(el) => handleContentItemRef(el)"
-            :style="{ backgroundImage: `url(${getAssetsFile(item.bg)})` }" v-for="(item, index) in productListRef"
+          <div class="my-product-item animationElement" :ref="(el) => handleContentItemRef(el)" v-for="(item, index) in productListRef"
             :key="index">
             <div class="my-product-item-left">
               <div class="my-product-switch" v-if="item.posterList.length > 1">
@@ -324,10 +324,27 @@ const handleProductClick = (item: any, childIndex: number) => {
                 </div>
 
               </div>
-              <div class="my-product-item-left-item" v-for="(childItem, childIndex) in item.posterList"
-                :key="childIndex">
+              <div class="my-product-item-left-item" :style="{height: childIndex === item.active ? '100%' : '0px'}" v-for="(childItem, childIndex) in item.posterList"
+                :key="childIndex" >
                 <img class="my-poster-item" :src="getAssetsFile(childItem)" alt="" v-if="childIndex === item.active" />
               </div>
+            </div>
+            <div class="my-product-item-right">
+              <div class="my-product-item-right-head">
+                <span></span>
+                <div>
+                  <p class="product-cate">{{ item.cate }}</p>
+                  <p class="product-title">{{ item.title }}</p>
+                </div>
+                <img class="product-part" :src="getAssetsFile(item.part)" alt="">
+              </div>
+              <div class="my-product-item-right-body">
+                <div class="my-product-item-right-body-item" v-for="(funcItem, funcIndex) in item.func" :key="funcIndex"> 
+                    <img class="my-product-item-right-body-item-icon" :src="getAssetsFile(funcItem.img)" alt="">
+                    <p class="my-product-item-right-body-item-desc" v-for="(descItem, descIndex) in funcItem.decs" :key="descIndex">{{ descItem }}</p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -369,7 +386,7 @@ const handleProductClick = (item: any, childIndex: number) => {
           <div class="sdk-bg">
             <img src="@/assets/code.png" alt="" />
           </div>
-          <div class="sdk-download-wrap">
+          <!-- <div class="sdk-download-wrap">
             <div class="sdk-download-btn-default">
               <span>{{ languageDic.sdk.btnText }}</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="sdk-icon" viewBox="0 0 24 24" fill="none">
@@ -388,7 +405,7 @@ const handleProductClick = (item: any, childIndex: number) => {
                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -407,7 +424,7 @@ const handleProductClick = (item: any, childIndex: number) => {
             </div>
             <div class="frame-wrapper-7">
               <div class="div-33">
-                <div class="text-wrapper-25">SparQi AI DevKit</div>
+                <div class="text-wrapper-25">{{languageDic.footer.developEng}}</div>
                 <div class="text-wrapper-25">{{ languageDic.footer.develop }}</div>
               </div>
             </div>
@@ -458,7 +475,7 @@ const handleProductClick = (item: any, childIndex: number) => {
           </div>
         </div>
         <div class="div-39">
-          <img class="image-4" :src="getAssetsFile('footer-logo.png')" />
+          <div class="image-4"></div>
           <div class="div-40">
             <p class="text-wrapper-28">
               {{ languageDic.footer.copyright }}
@@ -493,7 +510,6 @@ const handleProductClick = (item: any, childIndex: number) => {
 </style>
 
 <style lang="scss" scoped>
-$contentWidth: 1200px;
 @use './css/apply';
 @use './css/product';
 @use './css/sdk';
@@ -591,6 +607,26 @@ $contentWidth: 1200px;
   }
 }
 
+@keyframes fireDescFadeInPad {
+  from {
+    margin-top: 0.24rem;
+  }
+
+  to {
+    margin-top: -4.12rem;
+  }
+}
+
+@keyframes fireDescFadeOutPad {
+  from {
+    margin-top: -4.12rem;
+  }
+
+  to {
+    margin-top: 0.24rem;
+  }
+}
+
 
 
 .fire-desc2 {
@@ -658,37 +694,41 @@ $contentWidth: 1200px;
   }
 }
 
-@media (max-width: 768px) {
-  .sdk-code {
-    &.customFadeInUp {
-      opacity: 1;
-      animation: customCodeFadeInUpMobile 1s ease forwards;
-    }
-  }
-}
 
 
 @keyframes customCodeFadeInUpMobile {
   from {
     opacity: 0;
-    margin-top: 1.96rem;
+       margin-top: 2.36rem;
   }
 
   to {
     opacity: 1;
-    margin-top: -3.65rem;
+     margin-top: 0.45rem;
+  }
+}
+
+@keyframes customCodeFadeInUpPad {
+  from {
+    opacity: 0;
+       margin-top: 2.36rem;
+  }
+
+  to {
+    opacity: 1;
+       margin-top: 0.45rem;
   }
 }
 
 @keyframes customCodeFadeInUp {
   from {
     opacity: 0;
-    margin-top: 1.96rem;
+    margin-top: 2.36rem;
   }
 
   to {
     opacity: 1;
-    margin-top: -2.45rem;
+    margin-top: 0.45rem;
   }
 }
 
@@ -701,6 +741,7 @@ $contentWidth: 1200px;
   flex-direction: column;
   align-items: center;
   position: relative;
+  background-color: #fff;
 
   .bottom {
     display: flex;
@@ -728,7 +769,7 @@ $contentWidth: 1200px;
   .div-31 {
     display: flex;
     flex-direction: column;
-    width: $contentWidth;
+    width: 1200px;
     align-items: flex-start;
     gap: 0.64rem;
     padding: 0.40rem 0px;
@@ -953,6 +994,7 @@ $contentWidth: 1200px;
     line-height: 0.12rem;
     white-space: nowrap;
     cursor: pointer;
+
     &:hover {
       color: #000000;
     }
@@ -961,7 +1003,7 @@ $contentWidth: 1200px;
 
 .bottom-border {
   margin: 0 auto 0.48rem;
-  width: $contentWidth;
+  width: 1200px;
   height: 0.01rem;
   background-color: rgba(0, 0, 0, 0.12);
 }
@@ -998,6 +1040,8 @@ $contentWidth: 1200px;
       }
 
       .div-31 {
+        width: 100%;
+
         padding-bottom: 0.6rem;
       }
 
@@ -1030,6 +1074,109 @@ $contentWidth: 1200px;
       }
     }
   }
+
+  .sdk-code {
+    &.customFadeInUp {
+      opacity: 1;
+      animation: customCodeFadeInUpMobile 1s ease forwards;
+    }
+  }
+
+  .bottom-border {
+    width: 100%;
+  }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+   .frame {
+
+    .bottom {
+      padding-bottom: 0.6rem;
+      width: 80%;
+
+      .fire-png {
+        width: 2.88rem;
+      }
+
+      .text-wrapper-24 {
+        font-size: 0.54rem;
+      }
+
+      .text-wrapper-25 {
+        font-size: 0.32rem;
+      }
+
+      .text-wrapper-26 {
+        font-size: 0.44rem;
+      }
+
+      .div-36 {
+        padding: 0.52rem 0.08rem 0.52rem 0px;
+      }
+
+      .text-wrapper-27 {
+        font-size: 0.32rem;
+      }
+
+      .div-31 {
+        width: 100%;
+
+        padding-bottom: 0.6rem;
+      }
+
+      .div-37 {
+        gap: 0.8rem;
+      }
+
+      .image-4 {
+        width: 2.8rem;
+        height: auto;
+      }
+
+      .text-wrapper-28 {
+        width: auto;
+        font-size: 0.32rem;
+      }
+
+      .div-39 {
+        gap: 1.2rem;
+      }
+
+      .img-2 {
+        width: 0.36rem;
+        height: 0.36rem;
+      }
+
+      .text-wrapper-29,
+      .text-wrapper-30 {
+        font-size: 0.32rem;
+      }
+    }
+  }
+
+  .sdk-code {
+    &.customFadeInUp {
+      opacity: 1;
+      animation: customCodeFadeInUpPad 1s ease forwards;
+    }
+  }
+
+  .bottom-border {
+    width: 100%;
+  }
+  .fire-desc {
+  &.customFadeIn {
+    animation: fireDescFadeInPad 1s ease forwards;
+  }
+
+  &.customFadeOut {
+    animation: fireDescFadeOutPad 1s ease forwards;
+  }
+}
+
+
 
 }
 </style>
