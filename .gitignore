@@ -1,4 +1,25 @@
-.git/
-.DS_Store
+# API keys and secrets
+.env
+
+# Dependency directory
 node_modules
-package-lock.json
+bower_components
+.vscode
+# Editors
+.idea
+*.iml
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore built ts files
+dist
+
+# Logging files
+*.log
+*.pyc
+
+# unit test result
+coverage
+dist

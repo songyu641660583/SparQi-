@@ -1,8 +1,9 @@
 export default {
   nav: {
-    text1: "即刻体验",
+    text1: "套件简介",
     text2: "产品介绍",
-    text3: "开放资源",
+    text3: "设备申请",
+    text4: "开放资源",
   },
   fire: {
     title1: "SparQi Wearable AI DevKit",
@@ -10,7 +11,7 @@ export default {
     title3: "Wearable Intelligence",
     desc: "星种开发套件：点燃穿戴智能的星火",
     desc2:
-      "SparQi Wearable AI DevKit 星种开发套件是一套专为科研机构、医疗单位及创新团队打造的可穿戴研究平台，提供<br/>包括智能戒指、腕带、贴片与眼镜在内的设备原型。<br/>搭载多模态传感能力（IMU、PPG、EMG、温度、视觉等），支持边缘计算与AI模型研究，助力算法验证<br/>、AI数据集构建与智能终端原型开发。",
+      "SparQi Wearable AI DevKit 星种开发套件是一套专为科研机构、医疗单位及创新团队打造的智能可穿戴开发平台，<br/>提供各类穿戴设备原型",
   },
   apply: {
     title1: "Apply for SparQi Kit",
@@ -38,7 +39,7 @@ export default {
     title1: "Download SDK",
     title2: "Start Developing Today",
     title3: "一键下载，轻松接入",
-    desc: "星种套件提供全套 SDK 支持，涵盖原始数据读取、信号预处理、传感器同步接口与可视化模块，适用于 Android/iOS/PC 等平台。我们还支持自定义 API 接入、模型部署接口开放。",
+    desc: "星种套件提供SDK 支持，涵盖原始数据读取、信号预处理、传感器同步接口等模块，适用于android平台，并将陆续开放对其他平台的支持。",
     btnText: "即刻下载",
     btnTextHover: "进入下载页面",
   },
@@ -54,7 +55,7 @@ export default {
     address: "中国 北京市 海淀区 致真大厦A座17层",
     privacy: "隐私政策",
     terms: "使用条款",
-    ICP: "京ICP备xxxxx号",
+    ICP: "鲁ICP备08102446号",
     copyright: "Copyright © 2025 Apple Inc. All rights reserved."
   },
 };
